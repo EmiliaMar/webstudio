@@ -1,0 +1,42 @@
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -30px -30px 0;
+
+  &__box {
+    display: flex;
+    flex-basis: calc(100% / 2 - 30px);
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    height: 92px;
+    border: 1px solid $icon-gray;
+    fill: $icon-gray;
+    border-radius: 4px;
+    margin: 0 30px 30px 0;
+    cursor: pointer;
+    transition-property: fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__box:hover,
+  &__box:focus {
+    fill: $blue;
+    border: 1px solid $blue;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients {
+    &__box {
+      flex-basis: calc(100% / 3 - 30px);
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    &__box {
+      flex-basis: calc(100% / 6 - 30px);
+    }
+  }
+}

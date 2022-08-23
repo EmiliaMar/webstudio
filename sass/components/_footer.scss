@@ -1,0 +1,213 @@
+.footer {
+  margin: 0 auto;
+  background-color: $dark-gray;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__address {
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+  }
+  &__list {
+    display: block;
+  }
+  &__logo {
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    margin: 0 auto 20px;
+    width: 145px;
+    height: 31px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: $blue;
+  }
+  &__logo > span {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: white;
+  }
+  &__text {
+    margin: 0 0 9px;
+    text-align: center;
+    width: 247px;
+    height: 21px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+  }
+  &__mail {
+    margin-bottom: 9px;
+    width: 231px;
+    height: 21px;
+    left: 215px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: rgba(255, 255, 255, 0.6);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__mail:hover,
+  &__mail:focus {
+    color: $blue;
+  }
+  &__phone {
+    margin-bottom: 9px;
+    width: 231px;
+    height: 21px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__phone:hover,
+  &__phone:focus {
+    color: $blue;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    padding-top: 60px;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+  &__signup {
+    width: 100%;
+  }
+  &__form {
+    // min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__newsletter {
+    display: block;
+    text-indent: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: $dark-gray;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__newsletter::placeholder {
+    text-indent: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 0 0 33%;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+    &__address {
+      margin-right: 72px;
+    }
+    &__social {
+      margin-left: 72px;
+    }
+    &__title {
+      padding-top: 65px;
+    }
+    &__newsletter {
+      width: 450px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    height: 252px;
+    &__content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    &__logo {
+      margin: 0 0 20px;
+    }
+    &__text {
+      text-align: left;
+    }
+    &__social {
+      align-items: flex-start;
+      padding-left: 70px;
+    }
+    &__signup {
+      padding-left: 68px;
+    }
+    &__form {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      
+    }
+    &__title {
+      align-items: flex-start;
+      padding-top: 72px;
+    }
+    &__newsletter {
+      width: 358px;
+      margin-right: 12px;
+    }
+  }
+}
